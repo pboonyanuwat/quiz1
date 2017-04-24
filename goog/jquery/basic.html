@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <div class="container">
+
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title" id="phead1">Panel 1</h3>
+      </div>
+      <div class="panel-body">
+        Panel 1 Body
+      </div>
+    </div>
+
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel 2</h3>
+      </div>
+      <div class="panel-body">
+        Panel 2 Body
+      </div>
+    </div>
+
+    <div class="panel panel-danger" id="danger1">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel 3</h3>
+      </div>
+      <div class="panel-body">
+        Panel 3 Body
+      </div>
+    </div>
+    <div class="panel panel-danger" id="danger2">
+      <div class="panel-heading">
+        <h3 class="panel-title">Panel 4</h3>
+      </div>
+      <div class="panel-body">
+        Panel 4 Body
+      </div>
+    </div>
+    <div class="" id="space">
+
+    </div>
+
+      <button type="button" name="button" id="hide">Hide</button>
+      <button type="button" name="button" id="get">Get</button>
+      <button type="button" name="button" id="set">Set</button>
+      <button type="button" name="button" id="append">Append</button>
+      <button type="button" name="button" id="clear">Clear</button>
+      <button type="button" name="button" id="style">Style</button>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        //jQuery code go here
+        $('#style').click(function(){
+
+            $('#danger2').removeClass("panel-danger");
+            $('#danger2').addClass("panel-info");
+
+            $('button').addClass("btn btn-primary");
+
+        });
+
+
+
+
+
+
+
+
+
+        $('#append').click(function(){
+
+            $('#space').append("<h3>Added by jQuery</h3>");
+
+        });
+        $('#clear').click(function(){
+
+            $('#space').empty();
+
+        });
+
+        $('#get').click(function(){
+
+            alert($('#danger2').html());
+
+        });
+
+        $('#set').click(function(){
+
+            $('#phead1').text('Hello jQuery');
+
+        });
+
+
+        $('#hide').mouseenter(function(){
+
+            $('#danger1').hide();
+
+        });
+        $('#hide').mouseleave(function(){
+
+            $('#danger1').show();
+
+        });
+      });
+    </script>
+  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajax Basic</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+  </head>
+  <body>
+    <div class="container">
+      <h1>jQuery Ajax</h1>
+      <ul id="menu">
+
+      </ul>
+      <div id="contact">
+
+      </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        /*
+        $.get('menu.txt', function(data, status) {
+          console.log(data);
+          $('#menu').append(data);
+        });
+
+        $.get('contact.json', function(data, status) {
+
+          $.each(data.contacts, function(index, item) {
+            var no = "<h3>" + index + " ";
+            var name = " : " + item.name + " : ";
+            var tel = "<a href='tel://" + item.tel + "'>" + item.tel + "</a></h3>";
+            console.log(item.name);
+            console.log(item.tel);
+            $('#menu').append(no + name + tel);
+          });
+          */
+          var url = "https://reqres.in/api/users?page=1";
+          $.get(url, function(data, status) {
+            console.log(data);
+            $.each(data.data, function(index, item) {
+              var avatar = "<hr><img src='" + item.avatar + "'>";
+              var name = item.id + " "  + item.first_name + " " + item.last_name;
+              $('#contact').append(avatar + name);
+            });
+          });
+
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
